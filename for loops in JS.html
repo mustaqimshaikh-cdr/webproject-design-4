@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loops in JS</title>
+</head>
+<body>
+    <style>
+    *{
+        padding: 0%;
+        margin: 0%;
+    }
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 20px;
+        /* border-bottom: 1px solid black; */
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.377); 
+        /* width: 100%; */
+        position: relative;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        /* margin-bottom: 20px; */
+        background-color: rgb(255, 255, 255);
+    }
+    header h1{
+        font-size: 40px;
+    }
+    nav span{
+        font-size: 30px;
+        letter-spacing: 4px;
+        font-weight: bold;
+    }
+    section{
+        background-color: white;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.288);
+        margin-top: 20px;  
+        padding: 10px 10px;
+        display: flex;
+        justify-content: center;
+        /* width: 100%; */
+    }
+    section input{
+        border: 1px solid black;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 18px;
+        letter-spacing: 2px;
+        /* transition: 0.5s; */
+        outline: none;
+        width: 350px;
+    }
+    section input:hover{
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.281);
+        /* border: none; */
+    }
+    section button{
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 10px;
+        width: 150px;
+        background-color: transparent;
+        transition: 0.5s;
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+    section button:hover{
+        background-color: black;
+        color: white;
+        box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
+        /* border: none; */
+    }
+    section h3{
+        margin-top: 25px;
+        color: #008000;
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+    #res{
+        font-size: 28px;
+        margin-top: 10px;
+        letter-spacing: 2px;
+        border: 1px solid black;
+        /* display: none; */
+        text-align: center;
+        padding: 5px;
+    }
+    #res1{
+        font-size: 28px;
+        margin-top: 10px;
+        letter-spacing: 2px;
+        border: 1px solid black;
+        /* display: none; */
+        text-align: center;
+        padding: 5px;
+    }
+    .containt h4{
+        font-size: 20px;
+        margin: 15px 5px;
+    }
+    footer{
+        background-color: rgb(0, 0, 0);
+        color: white;
+        padding: 50px 10px;
+        /* text-align: center; */
+        /* width: 100%; */
+        margin-top: 20px;
+    }
+    footer p{
+        text-align: center;
+        color: grey;
+    }
+    .sction{
+        margin-top: 110px;
+    }
+</style>
+<body>
+    <header>
+        <h1>Logo</h1>
+        <nav>
+            <span>...</span>
+        </nav>
+    </header>
+    <section class="sction">
+        <div class="containt">
+          <h4>List Using Loops</h4>  
+       <input type="number" id="num" placeholder="Enter a Number" required = "Fill a number input"><br><br>
+      <input type="text" id="inp" placeholder="Enter Any Input" required = "Fill a number input"><br><br>
+      <button id="btn">Click</button>
+     <h3>Result:</h3>
+      <div id="res"></div>
+      </div>
+</section>
+<section>
+    <div class="containt">
+      <h4>Calculator Using Eval()</h4>  
+   <input type="text" id="num1" placeholder="Enter a Number" required = "Fill a number input"><br><br>
+   <button id="btn1">Calculate</button>
+   <h3>Output:</h3>
+   <div id="res1"></div>
+   </div>
+</section>
+<footer>
+    <p>Copyright 2023-24 | All Right Reserved.</p>
+</footer>
+
+
+    <script>
+
+        const input = document.getElementById("inp");
+        const button = document.getElementById("btn");
+        const result = document.getElementById("res");
+        const number = document.getElementById("num");
+
+        button.addEventListener("click",()=>{
+        let myinp = input.value; 
+        result.innerHTML = "";
+        count = parseInt(number.value);
+        for(let i = 1;i <= count;i++){
+            result.innerHTML += "<h4>" + myinp + "</h4>";
+        };
+    });
+
+    const num = document.getElementById("num1");
+    const btn = document.getElementById("btn1");
+    const res = document.getElementById("res1");
+    
+    btn.addEventListener("click",function(){
+        mynum = num.value
+        res.innerHTML = eval(mynum);
+    });
+        </script>
+
+</body>
+</html>
